@@ -74,7 +74,7 @@ button a:hover {
 section {
   display: flex;
   min-height: 100px;
-  padding: 100px 20vw;
+  padding: 60px 10vw;
   margin: 0;
   align-content: space-around;
   flex-direction: row;
@@ -154,6 +154,7 @@ footer a:hover {
 
 .appImg {
   width: 600px;
+  min-width: 300px;
   padding: 20px;
   border: 1px solid var(--first-colour);
 }
@@ -209,7 +210,7 @@ footer a:hover {
   color: var(--second-colour);
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 767px) {
   h1 {
     font-size: 100px;
   }
