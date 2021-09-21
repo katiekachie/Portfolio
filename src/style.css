@@ -52,7 +52,7 @@ button {
   border-radius: 5px;
   opacity: 1;
   transition: 0.3s;
-  font-family: var(--main-font);
+  font-family: var(--subhead-font);
   text-decoration: none;
   cursor: pointer;
 }
