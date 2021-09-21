@@ -9,11 +9,21 @@
   --subhead-font: "Zilla Slab", serif;
 }
 
+body,
+html {
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: -20px;
+}
+
 h1 {
   font-family: var(--display-font);
   color: var(--first-colour);
   font-size: 120px;
-  margin-top: -20px;
 }
 
 h2 {
@@ -21,7 +31,16 @@ h2 {
   color: var(--fourth-colour);
   font-size: 40px;
   font-weight: 100;
-  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: var(--main-font);
+  color: var(--fourth-colour);
+  font-size: 30px;
+  font-weight: 100;
+  text-align: right;
+  opacity: 0.7;
   margin-bottom: 20px;
 }
 
@@ -106,10 +125,25 @@ footer a:hover {
   opacity: 0.5;
 }
 
+/* content css*/
+
+.container {
+  margin-top: 100px;
+  padding: 60px 10vw;
+}
+
 .content {
   margin-top: 70px;
   margin-bottom: 70px;
   font-size: 25px;
+  font-family: var(--main-font);
+  font-weight: 200;
+}
+
+.about-content {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  font-size: 18px;
   font-family: var(--main-font);
   font-weight: 200;
 }
@@ -148,9 +182,10 @@ footer a:hover {
 
 .hero {
   text-align: center;
-  padding: 110px 20px;
-  margin-bottom: -30px;
+  padding: 100px 20px;
 }
+
+/* images css*/
 
 .appImg {
   width: 600px;
@@ -210,13 +245,90 @@ footer a:hover {
   color: var(--second-colour);
 }
 
+.profileImg {
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: var(--first-colour);
+  fill: transparent;
+  stroke-width: 1px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+/* code for the arrow by junjun (https://codepen.io/postor/pen/mskxI) */
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+}
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+}
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+}
+
+/*responsive info*/
+
 @media screen and (max-width: 767px) {
   h1 {
-    font-size: 100px;
+    font-size: 80px;
   }
 
   h2 {
     font-size: 25px;
+  }
+
+  .container h1 {
+    font-size: 70px;
   }
 
   button {
