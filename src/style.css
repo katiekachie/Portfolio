@@ -23,7 +23,7 @@ h3 {
 h1 {
   font-family: var(--display-font);
   color: var(--first-colour);
-  font-size: 120px;
+  font-size: 220px;
 }
 
 h2 {
@@ -40,6 +40,17 @@ h3 {
   font-size: 30px;
   font-weight: 100;
   text-align: right;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-family: var(--main-font);
+  color: var(--fourth-colour);
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
   opacity: 0.7;
   margin-bottom: 20px;
 }
@@ -62,18 +73,16 @@ a {
 button {
   background: var(--second-colour);
   border: none;
-  color: #fff;
-  padding: 16px 32px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 200;
-  margin: 4px 4px;
+  color: #ffffff;
   border-radius: 5px;
-  opacity: 1;
-  transition: 0.3s;
-  font-family: var(--subhead-font);
-  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 300px;
+  transition: all 0.5s;
   cursor: pointer;
+  margin: 5px;
+  font-family: var(--subhead-font);
 }
 
 button:hover {
@@ -88,6 +97,31 @@ button a {
 button a:hover {
   color: var(--first-colour);
   text-decoration: none;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 section {
@@ -129,7 +163,11 @@ footer a:hover {
 
 .container {
   margin-top: 100px;
-  padding: 60px 10vw;
+  padding: 20px 10vw;
+}
+
+.container h1 {
+  font-size: 100px;
 }
 
 .content {
@@ -148,6 +186,10 @@ footer a:hover {
   font-weight: 200;
 }
 
+.card {
+  box-shadow: 10px 10px 20px rgba(124, 193, 193, 0.2);
+}
+
 .subheading {
   font-family: var(--subhead-font);
   color: var(--first-colour);
@@ -157,6 +199,12 @@ footer a:hover {
   font-weight: 100;
   margin-top: 60px;
   margin-bottom: 30px;
+}
+
+.altButton {
+  color: var(--second-colour);
+  background: #ffffff;
+  border: 1px solid var(--second-colour);
 }
 
 .box {
@@ -189,7 +237,7 @@ footer a:hover {
 
 .appImg {
   width: 600px;
-  min-width: 300px;
+  min-width: 350px;
   padding: 5px;
   box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.1);
 }
@@ -237,7 +285,7 @@ footer a:hover {
 .skillsImg {
   font-family: var(--main-font);
   font-size: 60px;
-  color: var(--second-colour);
+  color: var(--fifth-colour);
 }
 
 .footerImg {
@@ -269,6 +317,7 @@ footer a:hover {
   animation: arrow 2s infinite;
   -webkit-animation: arrow 2s infinite;
 }
+
 /* code for the arrow by junjun (https://codepen.io/postor/pen/mskxI) */
 
 @keyframes arrow {
@@ -318,7 +367,7 @@ footer a:hover {
 
 /*responsive info*/
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   h1 {
     font-size: 80px;
   }
@@ -333,8 +382,9 @@ footer a:hover {
 
   button {
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
+    display: block;
+    max-width: 160px;
+    font-size: 15px;
   }
 
   .subheader {
