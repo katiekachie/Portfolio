@@ -380,6 +380,10 @@ footer a:hover {
     font-size: 70px;
   }
 
+  .arrowContainer {
+    display: none;
+  }
+
   button {
     margin: 0 auto;
     display: block;
@@ -387,10 +391,10 @@ footer a:hover {
     font-size: 15px;
   }
 
-  .subheader {
+  .subheading {
     text-align: center;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 18px;
   }
 
   .appImg {
@@ -398,6 +402,12 @@ footer a:hover {
   }
 
   .profileImg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .arrowContainer {
     display: none;
   }
 }
