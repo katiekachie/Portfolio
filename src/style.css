@@ -7,7 +7,6 @@
   --main-font: "Lato", sans-serif;
   --display-font: "Lobster Two", cursive;
   --subhead-font: "Zilla Slab", serif;
-  --radius: 0.2rem;
 }
 
 * {
@@ -85,7 +84,6 @@ button {
   text-align: center;
   font-size: 18px;
   padding: 20px;
-  width: 265px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -272,6 +270,10 @@ ul a {
   transition: 0.3s;
 }
 
+.navbar-custom .navbar-collapse {
+  background: var(--second-colour);
+}
+
 /* images css*/
 
 .appImg {
@@ -359,7 +361,7 @@ ul a {
     display: none;
   }
 
-  button {
+  section button {
     margin: 0 auto;
     display: block;
     font-size: 15px;
