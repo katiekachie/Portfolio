@@ -7,6 +7,13 @@
   --main-font: "Lato", sans-serif;
   --display-font: "Lobster Two", cursive;
   --subhead-font: "Zilla Slab", serif;
+  --radius: 0.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body,
@@ -97,31 +104,6 @@ button a {
 button a:hover {
   color: var(--first-colour);
   text-decoration: none;
-}
-
-button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-button span:after {
-  content: "\00bb";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-button:hover span {
-  padding-right: 25px;
-}
-
-button:hover span:after {
-  opacity: 1;
-  right: 0;
 }
 
 section {
@@ -232,8 +214,6 @@ ul a {
 
 .center {
   display: flex;
-  margin: 0 auto;
-  display: block;
   justify-content: center;
   align-items: center;
 }
@@ -255,6 +235,41 @@ ul a {
   margin-top: 40px;
   margin-left: 5vw;
   margin-right: 5vw;
+}
+
+.arrowContainer {
+  margin-top: -40px;
+}
+
+/*navbar css*/
+
+.navbar-custom {
+  background-color: #7dc1c1;
+  box-shadow: none;
+  height: 45px;
+  padding-bottom: 10px;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: var(--third-colour);
+  font-family: var(--subhead-font);
+  font-size: 25px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: var(--third-colour);
+  font-family: var(--main-font);
+}
+
+.navbar-custom .navbar-toggler {
+  color: var(--first-colour);
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: var(--first-colour);
+  background: var(--third-colour);
+  transition: 0.3s;
 }
 
 /* images css*/
@@ -288,7 +303,7 @@ ul a {
 
 .topImg {
   position: absolute;
-  top: 0;
+  top: 5;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -298,8 +313,8 @@ ul a {
 .topImg svg {
   position: relative;
   display: block;
-  width: calc(119% + 1.3px);
-  height: 86px;
+  width: calc(154% + 1.3px);
+  height: 57px;
 }
 
 .topImg .shape-fill {
@@ -325,73 +340,9 @@ ul a {
   width: 400px;
 }
 
-.arrows {
-  width: 60px;
-  height: 72px;
-  position: absolute;
-  left: 50%;
-  margin-left: -30px;
-  bottom: 20px;
-}
-
-.arrows path {
-  stroke: var(--first-colour);
-  fill: transparent;
-  stroke-width: 1px;
-  animation: arrow 2s infinite;
-  -webkit-animation: arrow 2s infinite;
-}
-
-/* code for the arrow by junjun (https://codepen.io/postor/pen/mskxI) */
-
-@keyframes arrow {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes arrow {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.arrows path.a1 {
-  animation-delay: -1s;
-  -webkit-animation-delay: -1s;
-}
-
-.arrows path.a2 {
-  animation-delay: -0.5s;
-  -webkit-animation-delay: -0.5s;
-}
-
-.arrows path.a3 {
-  animation-delay: 0s;
-  -webkit-animation-delay: 0s;
-}
-
 /*responsive info*/
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 768px) {
   h1 {
     font-size: 80px;
   }
@@ -416,7 +367,10 @@ ul a {
 
   .hero button {
     max-width: 150px;
-    margin: 5px;
+  }
+
+  .hero h1 {
+    font-size: 60px;
   }
 
   .subheading {
@@ -436,11 +390,19 @@ ul a {
   .list-group {
     max-width: 300px;
     margin-left: 0px;
+    margin-right: 10vw;
   }
 }
 
 @media screen and (max-width: 970px) {
   .arrowContainer {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .list-group {
+    max-width: 600px;
+    margin-left: 0px;
   }
 }
